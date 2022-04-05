@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paulyoon28.github.io/daycounter/sitemap.xml
