@@ -27,8 +27,8 @@ function getToday() {
 
 function showDayInfo(target, today) {
     const MAGIC_NUMBER = 86400000;
-    const targetDate = new Date(`${target.year}-${target.month}-${target.day}`);
-    const todayDate = new Date(`${today.year}-${today.month}-${today.day}`);
+    const targetDate = new Date(`${String(target.year)}-${String(target.month).padStart(2,0)}-${String(target.day).padStart(2,0)}T00:00:00`);
+    const todayDate = new Date(`${String(today.year)}-${String(today.month).padStart(2, 0)}-${String(today.day).padStart(2, 0)}T00:00:00`);
     const theDay = (targetDate - todayDate) / MAGIC_NUMBER;
     
 
@@ -37,7 +37,7 @@ function showDayInfo(target, today) {
     } else if (theDay < 0) {
         dayTextContainer.innerText = `D+${1-theDay}`
     } else {
-        dayTextContainer.innerText = `오늘이네요🙂!!`
+        dayTextContainer.innerText = `오늘이네요🙂`
     }
 }
 
