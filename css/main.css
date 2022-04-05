@@ -70,6 +70,7 @@ h1#todayDate {
     align-items: center;
     padding: 1em 0;
     font-size: 1.2em;
+    width: 20em;
 }
 
 #infoContainer div {

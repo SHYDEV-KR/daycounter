@@ -44,6 +44,7 @@ function paintMinusAnniversaries(date) {
     for (let i = 6; i >= 0; i--) {
         const anivContainer = document.createElement("div");
         anniversaries.appendChild(anivContainer);
+        anivContainer.id = `minus${i * 50}`
         
         const anivName = document.createElement("div");
         const anivDate = document.createElement("div");
@@ -54,6 +55,7 @@ function paintMinusAnniversaries(date) {
         const aniv = new Date(t);
         if (i === 0) {
             anivName.innerHTML = `D-Day`;
+            anivContainer.id = `theDay`
         } else {
             anivName.innerHTML = `D-${i * 50}`;
         }
@@ -74,6 +76,7 @@ function paintPlusAnniversaries(date) {
     for (let i = 1; i < 37; i++) {
         const anivContainer = document.createElement("div");
         anniversaries.appendChild(anivContainer);
+        anivContainer.id = `plus${i * 100}`
         
         const anivName = document.createElement("div");
         const anivDate = document.createElement("div");
@@ -131,7 +134,7 @@ function handleSubmit(event) {
     target['year'] = parseInt(targetDate.substr(0, 4));
     target['month'] = parseInt(targetDate.substr(5, 2));
     target['day'] = parseInt(targetDate.substr(8, 2));
-    
+
     anniversaries.innerHTML = "";
     showDayInfo(target, getToday());
 }
