@@ -1,10 +1,26 @@
 @import 'reset.css';
 
+body {
+    height: auto;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
+}
+
+#infoContainer.sticky {
+    top: 8em;
 }
 
 .hidden {

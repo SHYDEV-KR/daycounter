@@ -16,18 +16,18 @@
         </div>
     </div>
 
-    <hr>
-
-    <div class="container">
+    <div class="container sticky">
+        <hr>
         <h1 id="todayDate"></h1>
         <form class="container" id="dateForm">
             <input required type="date" placeholder="Name / Nickname"/>
             <input type="submit" value="계산" />
         </form>
         <hr>
-        <div id="infoContainer"></div>
-        <div id="anniversaries" class="container">
-        </div>
+    </div>
+    <div class="container">
+        <div id="infoContainer" class="sticky"></div>
+        <div id="anniversaries" class="container"></div>
     </div>
     <script src="js/countDay.js"></script>
     <script src="js/dayStats.js"></script>
