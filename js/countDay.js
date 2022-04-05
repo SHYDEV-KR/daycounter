@@ -3,6 +3,11 @@ const dateInput = document.querySelector("#dateForm input");
 const todayDate = document.querySelector("#todayDate");
 const infoContainer = document.querySelector("#infoContainer");
 let dayTextContainer = document.createElement("div");
+dayTextContainer.classList.add("dayTextContainer")
+dayTextContainer.classList.add("hidden")
+let selectedDay = document.createElement("div");
+
+infoContainer.appendChild(selectedDay);
 infoContainer.appendChild(dayTextContainer);
 
 function init() {
@@ -31,13 +36,24 @@ function showDayInfo(target, today) {
     const todayDate = new Date(`${String(today.year)}-${String(today.month).padStart(2, 0)}-${String(today.day).padStart(2, 0)}T00:00:00`);
     const theDay = (targetDate - todayDate) / MAGIC_NUMBER;
     
+    selectedDay.innerHTML = `
+        <h3>선택한 날짜</h3>
+        ${target.year}-${String(today.month).padStart(2, 0)}-${String(target.day).padStart(2, 0)}
+        `;
+    
 
     if (theDay > 0) {
-        dayTextContainer.innerText = `D-${theDay}`
+        dayTextContainer.innerText = `D-${theDay}`;
+        dayTextContainer.classList.remove("today");
+        dayTextContainer.classList.remove("hidden");
     } else if (theDay < 0) {
-        dayTextContainer.innerText = `D+${1-theDay}`
+        dayTextContainer.innerText = `D+${1 - theDay}`;
+        dayTextContainer.classList.remove("today");
+        dayTextContainer.classList.remove("hidden");
     } else {
-        dayTextContainer.innerText = `오늘이네요🙂`
+        dayTextContainer.innerText = `오늘!`;
+        dayTextContainer.classList.add("today");
+        dayTextContainer.classList.remove("hidden");
     }
 }
 
