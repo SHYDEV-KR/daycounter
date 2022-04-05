@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 계산기</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">날짜 계산기</h1>
+        <div id="instructions">
+            <h3 style="font-weight: bold; font-size: large;">사용법</h3><br>
+            <span>날짜를 입력하고 계산을 누르면 <br>디데이 계산 완료!</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h1 id="todayDate">오늘 : ####-##-##</h1>
+        <form class="container" id="dateForm">
+            <input required type="date" placeholder="Name / Nickname"/>
+            <input type="submit" value="계산" />
+        </form>
+
+        <hr>
+
+        <div id="infoContainer" class="container">
+        </div>
+    </div>
+    <script src="js/countDay.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@import 'reset.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: 20em;
+}
+
+h1.title {
+    margin-top: 1.5em;
+    font-size: xx-large;
+}
+
+h1#todayDate {
+    margin: 1em 0;
+}
+
+#instructions {
+    width: fit-content;
+    border: 1px black solid;
+    border-radius: 0.2em;
+    padding: 1em;
+    margin: 1em 0;
+    text-align: center;
+}
+
+#dateForm {
+    margin-bottom: 1em;
+}
+
+#dateForm input[type=date] {
+    width: 13em;
+    height: 2em;
+}
+
+#dateForm input[type=submit] {
+    margin-top: 0.3em;
+    width: 100%;
+}
+
+#infoContainer {
+    margin: 2em 0;
+    font-size: 1.5em;
+}
+
+.todayTheDay {
+
+}
