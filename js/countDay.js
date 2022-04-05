@@ -37,7 +37,7 @@ function showDayInfo(target, today) {
     } else if (theDay < 0) {
         dayTextContainer.innerText = `D+${1-theDay}`
     } else {
-        dayTextContainer.innerText = `오늘이네요🙂`
+        dayTextContainer.innerText = `오늘이네요🙂!!`
     }
 }
 
