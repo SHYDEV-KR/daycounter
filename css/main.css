@@ -50,9 +50,9 @@ h1#todayDate {
 
 #infoContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 1em 0;
+    padding: 1em 0;
     font-size: 1.2em;
 }
 
